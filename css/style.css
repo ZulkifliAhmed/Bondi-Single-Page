@@ -1,0 +1,767 @@
+/* Start Global Rules */
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+:root{
+   --main-color: #19283f;
+   --primre-color: #33d1cc;
+   --secend-colo: #ffc400;
+   --section-color:#eff7fa;
+   --text-color: #a8b9c0;
+   --button-color: #ff3150;
+   --main-transition: 0.5s;
+   --main-space: 50px;
+}
+body{
+   font-family: 'Roboto', sans-serif;
+}
+html{
+   scroll-behavior: smooth;
+}
+.container{
+   width: 80%;
+   margin: 0 auto;
+}
+.main-btn a{
+   padding: 10px 40px;
+   text-decoration: none;
+   border-radius: 20px;
+   color: var(--secend-colo);
+   background-color: var(--button-color);
+   text-transform: uppercase;
+   transition: var(--main-transition);
+}
+.main-btn a:hover{
+   color: white;
+   background-color: var(--primre-color);
+}
+.main-title{
+   text-align: center;
+}
+.main-title h2{
+   font-size: 35px;
+   font-weight: 500;
+   margin: 30px 0px 10px;
+   color: var(--main-color);
+}
+.main-title p{
+   font-size: 14px;
+   text-transform: uppercase;
+   color: var(--text-color);
+}
+.main-title span{
+   width: 130px;
+   height: 2px;
+   display: block;
+   margin: 10px auto;
+   background-color: var(--primre-color);
+}
+.icon-up{
+   position: fixed;
+   padding: 8px;
+   cursor: pointer;
+   border-radius: 5px;
+   right: -100px;
+   bottom: 30px;
+   background-color: var(--button-color);
+   transition: var(--main-transition);
+}
+.icon-up span{
+   color: var(--secend-colo);
+   text-transform: capitalize;
+   font-weight: bold;
+}
+.icon-up:hover{
+   background-color: var(--primre-color);
+}
+.icon-up:hover span{
+   color: white;
+}
+/* End Global Rules */
+
+/* Start Header */
+.header{
+  background-color: var(--main-color);
+}
+.header .links{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 20px 10px;
+}
+.header .links .logo{
+   cursor: pointer;
+   z-index: 999;
+}
+.header .links nav{
+   display: flex;
+   align-items: center;
+}
+.header .links nav ul{
+   display: flex;
+}
+.header .links nav ul li{
+   list-style: none;
+   margin-left: 35px;
+}
+.header .links nav ul li a{
+   font-size: 18px;
+   padding-bottom: 3px;
+   text-decoration: none;
+   text-transform: capitalize;
+   color: var(--text-color);
+}
+.header .links nav ul li .active{
+   color: var(--primre-color);
+}
+.header .links nav ul li:hover a{
+   color: var(--primre-color);
+}
+.header .links nav .search-icon{
+   padding-left: 15px;
+   margin-left: 30px;
+   border-left: 2px solid var(--primre-color);
+}
+.header .links nav .search-icon img{
+   cursor: pointer;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.header .links nav button{
+   padding: 8px 25px;
+   margin-left: 15px;
+   border-radius: 10px;
+   border: none;
+   font-size: 16px;
+   color: var(--secend-colo);
+   background-color: var(--button-color);
+   cursor: pointer;
+   text-transform: capitalize;
+   transition: var(--main-transition);
+}
+.header .links nav button:hover{
+   color: white;
+   background-color: var(--primre-color);
+}
+.header .links .nav-icon{
+   width: 45px;
+   height: 38px;
+   padding: 5px; 
+   display: none;
+   justify-content: space-around;
+   align-items: center;
+   flex-direction: column;
+   cursor: pointer;
+}
+.header .links .nav-icon span{
+  width: 100%;
+  height: 4px;
+  border-radius: 5px;
+  background-color: white;
+}
+.header .links .nav-icon:hover span{
+   background-color: var(--primre-color);
+}
+.header .text{
+   padding: 100px 0;
+   text-align: center;
+}
+.header .text h1{
+   font-size: 50px;
+   color: white;
+   font-weight: normal;
+}
+.header .text p{
+   font-size: 18px;
+   margin: 10px 0px 40px;
+   color: var(--text-color);
+}
+/* Start Media Queries */
+@media only screen and (max-width: 768px){
+   .header .container{
+      width: 100%;
+   }
+   .header .links{
+      position: relative;
+   }
+   .header .links nav{
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+      top: 0;
+      left: -100%;
+      flex-direction: column;
+      transform: translatex(-50%);
+      background-color: var(--main-color);
+   }
+   .show{
+      left: 50% !important;
+   }
+   .header .links nav ul{
+      flex-direction: column;
+      margin-top: 50px;
+   }
+   .header .links nav ul li{
+     margin: 8px 0;
+   }
+   .header .links nav .search-icon{
+      padding: 0;
+      margin: 10px 0 20px;
+      border-left: none;
+   }
+   .header .links .nav-icon{
+      display: flex;
+      z-index: 999;
+   }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px){
+   .header .links{
+      padding: 20px 0px;
+   }
+   .container{
+      width: 85%;
+   }
+   .header .links nav ul li{
+      margin-left: 20px;
+   }
+   .header .links nav .search-icon{
+      margin-left: 20px; 
+   }
+}
+/* End Header */
+
+/* Stard Services */
+.services{
+   padding-top: var(--main-space);
+   padding-bottom: var(--main-space);
+}
+.services .serv-boxs{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.services .serv-boxs .serv{
+   padding: 0 15px;
+   text-align: center;
+}
+.services .serv-boxs .serv-icon{
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+.services .serv-boxs .serv span{
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
+   font-size: 250px;
+   font-weight: 500;
+   color: var(--section-color);
+}
+.services .serv-boxs .serv h3{
+   width: fit-content;
+   margin: 0 auto 20px;
+   cursor: pointer;
+   text-transform: uppercase;
+   color: var(--secend-colo);
+}
+.services .serv-boxs .serv p{
+   color: var(--text-color);
+   font-size: 16px;
+   line-height: 25px;
+}
+/* Start Media Queries */
+@media only screen and (max-width: 768px) {
+   .services .serv-boxs{
+      flex-wrap: wrap;
+   }
+   .services .serv-boxs .serv{
+      margin-bottom: 30px;
+   }
+   .services .serv-boxs .serv p{
+      padding: 0 30px;
+   }
+}
+/* End Services */
+
+/* Stard Projects */
+.projects{
+   padding-top: var(--main-space);
+   padding-bottom: var(--main-space);
+   background-color: var(--section-color);
+   text-align: center;
+}
+.projects .boxs{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+   padding-bottom: 30px;
+}
+.projects ul{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: var(--main-space);
+   margin-bottom: var(--main-space);
+}
+.projects ul li{
+   list-style: none;
+   text-transform: capitalize;
+   margin: 10px 20px;
+   color: var(--text-color);
+   font-size: 20px;
+   padding: 5px 10px;  
+   border-radius: 4px;
+   cursor: pointer;
+}
+.projects ul .work{
+   background-color: var(--button-color);
+   color: var(--secend-colo);
+}
+.projects ul .work:hover{
+   background-color: var(--primre-color);
+   color: white;
+}
+.projects .our-project{
+   position: relative;
+   width: 200px;
+   margin: 15px;
+}
+.projects .our-project img{
+  width: 100%;
+  height: 100%;
+}
+.projects .our-project .text{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: var(--primre-color);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   text-transform: capitalize;
+   cursor: pointer;
+   opacity: 0;
+   transition: var(--main-transition);
+}
+.projects .our-project .text p{
+   color: white;
+   font-size: 25px;
+}
+.projects .our-project .text span{
+   color: black;
+   font-size: 20px;
+}
+.projects .our-project:hover .text{
+    opacity: 1;
+}
+/* Start Media Queries */
+@media only screen and (max-width: 600px) {
+   .projects ul{
+       flex-wrap: wrap;
+   }
+   .projects ul li{
+      margin: 10px;
+      font-size: 15px;
+      padding: 5px;  
+   }
+}
+/* End Projects */
+
+/* Stard About */
+.about{
+   padding-top: var(--main-space);
+}
+.about .fris-p{
+   width: 50%;
+   margin: 30px auto;
+   text-align: center;
+   color: var(--text-color);
+}
+.about .stuff{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: var(--main-space);
+}
+.about .text{
+   width: 50%;
+}
+.about .text h3{
+   text-transform: capitalize;
+   color: var(--main-color);
+}
+.about .text p:first-of-type{
+   padding: 20px 0;
+   color: var(--text-color);
+}
+.about .text p:last-of-type{
+   padding: 10px 0 30px;
+   color: var(--text-color);
+}
+.about .stuff .image {
+   width: 80%;
+}
+.about .stuff .image img{
+   width: 100%;
+   height: 100%;
+}
+/* Start Media Queries */
+@media only screen and (max-width: 768px) {
+   .about .fris-p{
+      width: 100%;
+   }
+   .about .stuff{
+     flex-wrap: wrap;
+     flex-direction: column-reverse;
+     padding-bottom: 30px;
+   }
+   .about .text{
+      width: 100%;
+      text-align: center;
+   }
+   .about .stuff .image {
+      width: 70%;
+      margin: 10px 0 30px;
+   }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px){
+   .about .fris-p{
+      width: 90%;
+   }
+   .about .text{
+      width: 70%;
+      padding-bottom: 30px;
+   }
+   .about .stuff .image {
+      width: 80%;
+   }
+}
+/* End About */
+
+/* Stard Team */
+.team{
+   padding-top: var(--main-space);
+   padding-bottom: var(--main-space);
+   background-color: var(--section-color);
+   text-align: center;
+}
+.team h3{
+   margin: 20px;
+   font-size: 30px;
+   color: var(--secend-colo);
+}
+.team .fris-p{
+   width: 70%;
+   margin: 10px auto 50px;
+   color: var(--text-color);
+}
+.team .teams{
+   display: flex;
+   gap: 25px;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+.team .team-box{
+   width: 220px;
+   height: 400px;
+   background-color: white;
+   box-shadow: 0px 5px 10px #00000038;
+   overflow: hidden;
+}
+.team .team-box .image{
+  position: relative;
+  height: 250px;
+}
+.team .team-box .image h4{
+   position: absolute;
+   bottom: 0;
+   padding: 15px;
+   width: 100%;
+   color: white;
+   font-size: 20px;
+   cursor: pointer;
+   text-transform: capitalize;
+   background-color: #33d1ccbb;
+   border: 3px solid var(--primre-color);
+   transition: var(--main-transition);
+}
+.team .team-box .image img{
+   opacity: .9;
+   width: 100%;
+   height: 100%;
+   transition: var(--main-transition);
+}
+.team .team-box .image:hover img{
+   opacity: 1;
+}
+.team .team-box .image:hover h4{
+   background-color: var(--primre-color);
+}
+.team .teams p{
+   margin: 25px 5px 5px;
+   color: var(--text-color);
+}
+/* End Team */
+
+/* Stard Clients */
+.clients{
+   padding-top: var(--main-space);
+   padding-bottom: var(--main-space);
+}
+.clients .container{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+   gap: 40px;
+}
+/* End Clients */
+
+/* Stard Contact */
+.contact{
+   text-align: center;
+   color: white;
+   padding-top: var(--main-space);
+   padding-bottom: var(--main-space);
+   background-color: var(--main-color);
+}
+.contact h2{
+   margin: 30px 0px 10px;
+   text-transform: capitalize;
+   font-size: 28px;
+   font-weight: 500;
+}
+.contact .main-btn{
+   margin: 40px 0px 30px;
+}
+/* End Contact */
+
+/* Stard Blog */
+.blog{
+   padding-top: var(--main-space);
+   padding-bottom: var(--main-space);
+}
+.blog .blogs{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 30px;
+   padding-top: var(--main-space);
+   flex-wrap: wrap;
+}
+.blog .blog-box .image{
+   width: 250px;
+   height: 100px;
+   margin-bottom: 10px;
+}
+.blog .blog-box .image img{
+   width: 100%;
+   height: 100%;
+}
+.blog .blog-box span{
+   color: var(--text-color);
+}
+.blog .blog-box p{
+   margin-top: 5px;
+   font-size: 18px;
+   text-transform: capitalize;
+   color: var(--main-color);
+}
+.blog .main-btn{
+   margin-top: var(--main-space);
+   text-align: center;
+}
+/* End Blog */
+
+/* Stard Subscribe */
+.subscribe{
+   padding-top: var(--main-space);
+   padding-bottom: var(--main-space);
+   background-color: var(--secend-colo);
+}
+.subscribe .container{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 20px;
+}
+.subscribe p{
+   font-size: 18px;
+   margin-right: 10px;
+}
+.subscribe input[type="email"]{
+   width: 350px;
+   padding: 5px 0px;
+   border: none;
+   border-bottom: 2px solid white;
+   background-color: transparent;
+   color: white;
+   font-size: 16px;
+}
+.subscribe input[type="email"]:focus{
+   outline: none;
+}
+.subscribe input[type="email"]::placeholder{
+   font-size: 16px;
+   color: white;
+}
+.subscribe .main-btn {
+   width: fit-content;
+}
+.subscribe .main-btn a{
+   background-color: var(--main-color);
+}
+.subscribe .main-btn:hover a{
+   background-color: var(--primre-color);
+}
+/* Start Media Queries */
+@media only screen  and (min-width: 829px)  and (max-width: 992px){
+   .subscribe p{
+      font-size: 16px;
+      margin-right: 0px;
+   }
+   .subscribe input[type="email"]{
+      width: 300px;
+   }
+}
+@media only screen  and (min-width: 769px)  and (max-width: 828px){
+   .subscribe .container{
+      gap: 10px;
+   }
+   .subscribe p{
+      font-size: 16px;
+      margin-right: 0px;
+   }
+   .subscribe input[type="email"]{
+      width: 250px;
+   }
+   }
+   @media only screen and (min-width: 601px) and (max-width: 768px) {
+      .subscribe .container{
+         flex-direction: column;
+      }
+      .subscribe input[type="email"]{
+         width: 300px;
+      }
+   }
+   @media only screen and (max-width: 600px) {
+      .subscribe .container{
+         flex-direction: column;
+      }
+      .subscribe input[type="email"]{
+         width: 200px;
+      }
+   }
+/* End Subscribe */
+
+/* Stard Footer */
+.footer{
+   padding-top: var(--main-space);
+   padding-bottom: var(--main-space);
+   background-color: var(--main-color);
+}
+.footer .container{
+   display: flex;
+   justify-content: center;
+   gap: 40px;
+}
+.footer .text{
+   flex-basis: 35%;
+   color: var(--text-color);
+}
+.footer .text .logo img{
+   cursor: pointer;
+}
+.footer .text p:first-of-type{
+   line-height: 25px;
+   margin: 20px 0;
+}
+.footer .text p:nth-of-type(2){
+   margin-bottom: 10px;
+}
+.footer .text p:nth-of-type(2) span{
+   color: var(--primre-color);
+   cursor: pointer;
+}
+.footer .text p:nth-of-type(3) span{
+   cursor: pointer;
+   color: var(--secend-colo);
+}
+.footer .boxs{
+   display: flex;
+   gap: 40px;
+   flex-basis: 30%;
+}
+.footer .box h1,
+.footer .con-box h1{
+   color: white;
+   margin-bottom: 20px;
+   font-size: 20px;
+}
+.footer .box li{
+   cursor: pointer;
+   list-style: none;
+   width: fit-content;
+   margin-bottom: 15px;
+   text-transform: capitalize;
+   color: var(--text-color);
+}
+.footer .con-box{
+   flex-basis: 20%;
+}
+.footer .con-box p:first-of-type{
+   line-height: 25px;
+   color: var(--text-color);
+   margin-bottom: 20px;
+}
+.footer .con-box .email{
+   background-color: var(--button-color);
+   text-align: center;
+   padding: 10px;
+   border-radius: 20px;
+   margin-bottom: 20px;
+   border: 2px solid var(--button-color);
+   transition: var(--main-transition);
+}
+.footer .con-box .email:hover{
+   background-color: transparent;
+}
+.footer .con-box .email a{
+   color: white;
+   text-decoration: none;
+}
+.footer .con-box .icon{
+   cursor: pointer;
+   width: fit-content;
+}
+/* Start Media Queries */
+@media only screen and (max-width: 768px) {
+   .footer .container{
+      flex-direction: column;
+   }
+   .footer .con-box .email{
+      width: fit-content;
+   }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px){
+   .footer .container{
+      gap: 30px;
+   }
+   .footer .text{
+      flex-basis: 30%;
+   }
+   .footer .boxs{
+      gap: 20px;
+   }
+   .footer p{
+      font-size: 14px;
+   }
+   }
+/* End Footer */
